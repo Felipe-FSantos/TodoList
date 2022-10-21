@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:todo_list/screens/home.dart';
+import 'package:todo_list/themes/dark_theme.dart';
+import 'package:todo_list/themes/light_theme.dart';
 
 void main(){
-  runApp(const MaterialApp(
+  runApp(MaterialApp(
     title: 'ToDo List',
-    home: Home(),
+    home: const Home(),
+    themeMode: ThemeMode.system,
+    theme: darkTheme(),
+    darkTheme: lightTheme(),
     debugShowCheckedModeBanner: false,
   ));
 
